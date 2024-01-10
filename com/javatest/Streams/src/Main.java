@@ -19,13 +19,11 @@ public class Main {
         b = numeros.stream().noneMatch(n -> n > 0);
         System.out.println(b);
     }
-        public String getNombreSeguro(Persona persona) {
-            return persona.getCoche()
-                    .flatMap(Coche::getSeguro)
-                    .map(Seguro::getNombre)
-                    .orElse("Desconocido");
-        }
 
-
-
+    public String getNombreSeguro(Persona persona) {
+        return persona.getCoche()
+                .flatMap(Coche::getSeguro)
+                .map(Seguro::getNombre)
+                .orElse("Desconocido");
+    }
 }
