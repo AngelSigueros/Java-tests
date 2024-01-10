@@ -7,8 +7,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
-
         List<String> frutas = Arrays.asList("manzana", "banana", "cereza");
         boolean b = frutas.stream().allMatch(f -> f.length() > 6);
         System.out.println(b);
@@ -18,9 +16,9 @@ public class Main {
         System.out.println(b);
 
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
-        b =  numeros.stream().noneMatch(n -> n > 0);
+        b = numeros.stream().noneMatch(n -> n > 0);
         System.out.println(b);
-
+    }
         public String getNombreSeguro(Persona persona) {
             return persona.getCoche()
                     .flatMap(Coche::getSeguro)
@@ -29,5 +27,5 @@ public class Main {
         }
 
 
-    }
+
 }
